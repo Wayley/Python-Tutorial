@@ -1,0 +1,1 @@
+print('hi i m wz,and i m 17 years old')
