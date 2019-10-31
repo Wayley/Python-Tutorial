@@ -47,9 +47,9 @@ print('and u r '+ age + 'year(s) old')
 
 - 布尔值
 
-  > True or False
+  - True or False
 
-  > 布尔值可以用 and or not 运算
+  - 布尔值可以用 and or not 运算
 
 - 空值 None
 
