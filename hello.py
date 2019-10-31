@@ -1,1 +1,1 @@
-print('hi i m wz,and i m 17 years old')
+print('hi i m wz, and nice 2 meet u')
