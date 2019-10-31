@@ -8,6 +8,7 @@
 4. [常量](#constant)
 5. [运算](#operation)
 6. [字符编码](#character_encoding)
+7. [格式化](#format)
 
 ## Contents
 
@@ -97,3 +98,50 @@ PI = 3.1415826
   <a name="character_encoding">
 
 ### 字符编码
+
+<a name="format">
+
+### 格式化
+
+> Python 格式化方式是使用 % 实现
+
+| 占位符 |       备注       |   替换内容   |
+| :----: | :--------------: | :----------: |
+|   %d   | 可以指定是否补 0 |     整数     |
+|   %f   |  可以指定小数位  |    浮点数    |
+|   %s   |                  |    字符串    |
+|   %x   |                  | 十六进制整数 |
+
+> 只有一个占位符的时候可以省略括号,多个占位符的时候使用()依次展开
+
+```py
+print('the score is %d' % 96)  # the score is 96
+print('the score is %5d' % 96)  # the score is    96 # 会总长度为5 多余的用空格占据
+print('the score is %05d' % 96)  # the score is 00096 # 会总长度为5 多余的用0占据
+```
+
+```py
+
+# %f 没有指定小数点的时候 会 五舍六入到小数点后6位(如下代码)
+print('the score is %f' %
+      96.12345)  # the score is 96.123450   # 末尾会补0 直到小数点后六位(未知原因) TODO;
+print('the score is %f' % 96.123456)  # the score is 96.123456
+print('the score is %f' % 96.1234567)  # the score is 96.123457
+print('the score is %f' % 96.1234546)  # the score is 96.123455
+print('the score is %f' % 96.1234545)  # the score is 96.123454
+
+```
+
+```py
+# 正常的情况下
+print('the score is %.3f' % 96.1234)  # the score is 96.123
+```
+
+```py
+# 没有小数点的时候 %0Xf 会保留小数点后6位 没有的用0补充, 遵循四舍五入
+print('the score is %03f' % 96.12345)  # the score is 96.123450
+print('the score is %03f' % 96.123456)  # the score is 96.123456
+print('the score is %03f' % 96.1234561)  # the score is 96.123456
+print('the score is %03f' % 96.1234564)  # the score is 96.123456
+print('the score is %03f' % 96.1234565)  # the score is 96.123457
+```
