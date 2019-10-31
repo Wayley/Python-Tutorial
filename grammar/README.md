@@ -31,25 +31,24 @@ print('and u r '+ age + 'year(s) old')
 <a name="data_type">
 
 - 整数
-
 - 浮点数
 
 - 字符串
 
-```py
-# 使用 \ 来转义
-sentence = 'i\'m wz, and r u \"OK" ?'
-# 使用 r'' 来表示''内部的字符串不转义
-sentence_ = '\\\22e2\\'  # \e2\
-sentence__ = r'\\\222\\'  # \\\222\\
-```
+  ```py
+  # 使用 \ 来转义
+  sentence = 'i\'m wz, and r u \"OK" ?'
+  # 使用 r'' 来表示''内部的字符串不转义
+  sentence_ = '\\\22e2\\'  # \e2\
+  sentence__ = r'\\\222\\'  # \\\222\\
+  ```
 
 - 布尔值
 
-```py
-# True or False
-# 布尔值可以用 and or not 运算
-```
+  ```py
+  # True or False
+  # 布尔值可以用 and or not 运算
+  ```
 
 - 空值 None
 
@@ -79,20 +78,20 @@ PI = 3.1415826
 
 - 除运算( / 和 // )
 
-```py
-print(10/3) # 3.3333333333333335
-print(9/3) # 3.0
+  ```py
+  print(10/3) # 3.3333333333333335
+  print(9/3) # 3.0
 
-# 地板除
-print(10//3) # 3
-print(9//3) # 3
-```
+  # 地板除
+  print(10//3) # 3
+  print(9//3) # 3
+  ```
 
 - 余数运算( % )
 
-```py
-print(10%3) # 1
-```
+  ```py
+  print(10%3) # 1
+  ```
 
 ### 字符编码
 
