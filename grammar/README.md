@@ -11,9 +11,9 @@
 
 ## Contents
 
-### 输入和输出
-
 <a name="input_print">
+
+### 输入和输出
 
 ```py
 # 输入
@@ -26,11 +26,12 @@ print('and u r '+ age + 'year(s) old')
 
 ```
 
-### 数据类型
-
 <a name="data_type">
 
+### 数据类型
+
 - 整数
+
 - 浮点数
 
 - 字符串
@@ -38,6 +39,7 @@ print('and u r '+ age + 'year(s) old')
   ```py
   # 使用 \ 来转义
   sentence = 'i\'m wz, and r u \"OK" ?'
+
   # 使用 r'' 来表示''内部的字符串不转义
   sentence_ = '\\\22e2\\'  # \e2\
   sentence__ = r'\\\222\\'  # \\\222\\
@@ -45,10 +47,9 @@ print('and u r '+ age + 'year(s) old')
 
 - 布尔值
 
-  ```py
-  # True or False
-  # 布尔值可以用 and or not 运算
-  ```
+  > True or False
+
+  > 布尔值可以用 and or not 运算
 
 - 空值 None
 
@@ -56,15 +57,15 @@ print('and u r '+ age + 'year(s) old')
 
 - 字典
 
-### 变量
-
 <a name="variate">
+
+### 变量
 
 > 大小写英文字母、数字和下划线\_组合,且不能以数字开头
 
-### 常量
-
 <a name="constant">
+
+### 常量
 
 > 通常使用全部大写字母表示常量
 
@@ -72,9 +73,9 @@ print('and u r '+ age + 'year(s) old')
 PI = 3.1415826
 ```
 
-### 运算
-
 <a name="operation">
+
+### 运算
 
 - 除运算( / 和 // )
 
@@ -93,6 +94,6 @@ PI = 3.1415826
   print(10%3) # 1
   ```
 
-### 字符编码
+  <a name="character_encoding">
 
-<a name="character_encoding">
+### 字符编码
