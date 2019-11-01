@@ -43,8 +43,8 @@
 # print(result)
 # # i m wz, i m in class 09 and my score is 98.76 under the full mark which is 100.000
 
-fruits = ['apple', 'orange', 'banana', 'pomegranate']
-length = len(fruits)
+# fruits = ['apple', 'orange', 'banana', 'pomegranate']
+# length = len(fruits)
 # print(length)  # 4
 # # 获取最后一个
 # print(fruits[length - 1])
@@ -81,8 +81,53 @@ length = len(fruits)
 # print((), (1), (1, ), (1, '1'))  # () 1 (1,) (1, '1')
 # tuple 不可变指的是 指向不可变,例如:
 
-_tup = ('HUAT', 11, 42, ['w', 'z'])
-print(_tup)  # ('HUAT', 11, 42, ['w', 'z'])
-# _tup[0] = '345' # 不被允许的,会报错误TypeError: 'tuple' object does not support item assignment
-_tup[3][0] = 'WWW'  # 是被允许的
-print(_tup)  # ('HUAT', 11, 42, ['WWW', 'z'])
+# _tup = ('HUAT', 11, 42, ['w', 'z'])
+# print(_tup)  # ('HUAT', 11, 42, ['w', 'z'])
+# # _tup[0] = '345' # 不被允许的,会报错误TypeError: 'tuple' object does not support item assignment
+# _tup[3][0] = 'WWW'  # 是被允许的
+# print(_tup)  # ('HUAT', 11, 42, ['WWW', 'z'])
+
+# 条件判断
+# score = int(input('Enter ur score: '))
+# if score >= 90:
+#     print('u get an A')
+# elif score >= 80:
+#     print('u get a B')
+# elif score >= 60:
+#     print('u get a C')
+# else:
+#     print('u get a D')
+
+# 循环
+# for in
+# fruits = ['apple', 'orange', 'banana', 'pomegranate']
+# tups = ('HUAT', 11, 42, ['w', 'z'])
+# for fruit in fruits:
+#     print(fruit)
+# for tup in tups:
+#     print(tup)
+# while
+# 打印1-10内的整数
+n = 1
+while n < 10:
+    print(n)
+    n += 1
+print('--------------------分割线---------------------')
+# 打印1-20内的偶数 continue
+m = 0
+while m < 20:
+    m += 1
+    if (m % 2 == 1):
+        continue
+    print(m)
+print('--------------------分割线---------------------')
+
+# 打印1-50内 第一个9的倍数
+q = 1
+while q <= 50:
+    if q % 9 == 0:
+        print('找到了', q)
+        break
+    print(q)
+    q += 1
+print('--------------------分割线---------------------')

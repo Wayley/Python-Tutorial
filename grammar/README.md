@@ -9,6 +9,8 @@
 5. [运算](#operation)
 6. [字符编码](#character_encoding)
 7. [格式化](#format)
+8. [条件判断](#condition)
+9. [循环](#loop)
 
 ## Contents
 
@@ -237,4 +239,66 @@ PI = 3.1415826
   result = 'i m {0}, i m in class {1:02d} and my score is {2:.2f} under the full mark which is {3:.3f}'.format(
     'wz', 9, 98.7609, 100.00)
   print(result)# i m wz, i m in class 09 and my score is 98.76 under the full mark which is 100.000
+  ```
+
+<a name="condition">
+
+### 条件判断
+
+```py
+score = int(input('Enter ur score: '))
+if score >= 90:
+    print('u get an A')
+elif score >= 80:
+    print('u get a B')
+elif score >= 60:
+    print('u get a C')
+else:
+    print('u get a D')
+```
+
+<a name="loop">
+
+### 循环
+
+- for in
+
+  ```py
+  fruits = ['apple', 'orange', 'banana', 'pomegranate']
+  tups = ('HUAT', 11, 42, ['w', 'z'])
+  for fruit in fruits:
+      print(fruit)
+  for tup in tups:
+      print(tup)
+  ```
+
+- while
+
+  ```py
+  # 打印1-10内的整数
+  n = 1
+  while n < 10:
+      print(n)
+      n += 1
+  ```
+
+  ```py
+  # 打印1-20内的偶数 continue
+  m = 0
+  while m < 20:
+      m += 1
+      if (m % 2 == 1):
+          continue
+      print(m)
+  ```
+
+  ```py
+  # 打印1-50内 第一个9的倍数
+  q = 1
+  while q <= 50:
+      if q % 9 == 0:
+          print('找到了第一个9的倍数', q)
+          break
+      print(q)
+      q += 1
   ```
