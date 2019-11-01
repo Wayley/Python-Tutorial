@@ -137,6 +137,42 @@ print('and u r '+ age + 'year(s) old')
 
 - 字典
 
+  > 类型于 JavaScript 中的 Object 对象
+
+  ```py
+  dic = {'name': 'wz', 'age': 19, 'fav_fruits': ['apple', 'banana', 'orange']}
+  print(dic)
+  ```
+
+  - 检验 key 是否存在
+    - key in dic
+      ```py
+      print('name' in dic)  # True
+      print('name1' in dic)  # False
+      ```
+    - dic.get(key)
+      ```py
+      print(dic.get('name')) # wz
+      print(dic.get('name2')) # None
+      print(dic.get('name3', '不存在'))  # key值不存在的时候默认会返回None(交互模式下没有), 也可以指定第二个返回值
+      ```
+  - 添加
+
+    ```py
+    dic['name1'] = 'name111'
+    print(dic)
+    #{'name': 'wz', 'age': 19, 'fav_fruits': ['apple', 'banana', 'orange'], 'name1': 'name111'}
+    ```
+
+  - 删除某个 key 和 value
+
+    > pop(key) 进行删除 (不存在的 key 值会报错)
+
+    ```py
+    dic.pop('age')
+    print(dic) # {'name': 'wz', 'fav_fruits': ['apple', 'banana', 'orange'], 'name1': 'name111'}
+    ```
+
 <a name="variate">
 
 ### 变量

@@ -108,26 +108,42 @@
 #     print(tup)
 # while
 # 打印1-10内的整数
-n = 1
-while n < 10:
-    print(n)
-    n += 1
-print('--------------------分割线---------------------')
-# 打印1-20内的偶数 continue
-m = 0
-while m < 20:
-    m += 1
-    if (m % 2 == 1):
-        continue
-    print(m)
-print('--------------------分割线---------------------')
+# n = 1
+# while n < 10:
+#     print(n)
+#     n += 1
+# print('--------------------分割线---------------------')
+# # 打印1-20内的偶数 continue
+# m = 0
+# while m < 20:
+#     m += 1
+#     if (m % 2 == 1):
+#         continue
+#     print(m)
+# print('--------------------分割线---------------------')
 
-# 打印1-50内 第一个9的倍数
-q = 1
-while q <= 50:
-    if q % 9 == 0:
-        print('找到了', q)
-        break
-    print(q)
-    q += 1
-print('--------------------分割线---------------------')
+# # 打印1-50内 第一个9的倍数
+# q = 1
+# while q <= 50:
+#     if q % 9 == 0:
+#         print('找到了', q)
+#         break
+#     print(q)
+#     q += 1
+# print('--------------------分割线---------------------')
+dic = {'name': 'wz', 'age': 19, 'fav_fruits': ['apple', 'banana', 'orange']}
+print(dic)
+# print('name' in dic)  # True
+# print('name1' in dic)  # False
+# print(dic.get('name'))  # wz
+# print(dic.get('name2'))  # None
+# print(dic.get('name3', '不存在'))  # key值不存在的时候默认会返回None(交互模式下没有), 也可以指定第二个返回值
+
+# 添加
+dic['name1'] = 'name111'
+print(dic)
+#{'name': 'wz', 'age': 19, 'fav_fruits': ['apple', 'banana', 'orange'], 'name1': 'name111'}
+# 删除
+dic.pop('age')
+print(dic)
+# {'name': 'wz', 'fav_fruits': ['apple', 'banana', 'orange'], 'name1': 'name111'}
