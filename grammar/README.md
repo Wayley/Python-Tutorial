@@ -139,39 +139,83 @@ print('and u r '+ age + 'year(s) old')
 
   > 类型于 JavaScript 中的 Object 对象
 
-  ```py
-  dic = {'name': 'wz', 'age': 19, 'fav_fruits': ['apple', 'banana', 'orange']}
-  print(dic)
-  ```
-
-  - 检验 key 是否存在
-    - key in dic
-      ```py
-      print('name' in dic)  # True
-      print('name1' in dic)  # False
-      ```
-    - dic.get(key)
-      ```py
-      print(dic.get('name')) # wz
-      print(dic.get('name2')) # None
-      print(dic.get('name3', '不存在'))  # key值不存在的时候默认会返回None(交互模式下没有), 也可以指定第二个返回值
-      ```
-  - 添加
+  - dict
 
     ```py
-    dic['name1'] = 'name111'
+    dic = {'name': 'wz', 'age': 19, 'fav_fruits': ['apple', 'banana', 'orange']}
     print(dic)
-    #{'name': 'wz', 'age': 19, 'fav_fruits': ['apple', 'banana', 'orange'], 'name1': 'name111'}
     ```
 
-  - 删除某个 key 和 value
+    - 检验 key 是否存在
+      - key in dic
+        ```py
+        print('name' in dic)  # True
+        print('name1' in dic)  # False
+        ```
+      - dic.get(key)
+        ```py
+        print(dic.get('name')) # wz
+        print(dic.get('name2')) # None
+        print(dic.get('name3', '不存在'))  # key值不存在的时候默认会返回None(交互模式下没有), 也可以指定第二个返回值
+        ```
+    - 添加
 
-    > pop(key) 进行删除 (不存在的 key 值会报错)
+      ```py
+      dic['name1'] = 'name111'
+      print(dic)
+      #{'name': 'wz', 'age': 19, 'fav_fruits': ['apple', 'banana', 'orange'], 'name1': 'name111'}
+      ```
 
-    ```py
-    dic.pop('age')
-    print(dic) # {'name': 'wz', 'fav_fruits': ['apple', 'banana', 'orange'], 'name1': 'name111'}
-    ```
+    - 删除某个 key 和 value
+
+      > pop(key) 进行删除 (不存在的 key 值会报错)
+
+      ```py
+      dic.pop('age')
+      print(dic) # {'name': 'wz', 'fav_fruits': ['apple', 'banana', 'orange'], 'name1': 'name111'}
+      ```
+
+  - set
+
+    - set 和 dict 类似，但是只存储 key 不存储 value
+
+      ```py
+      s = set(['A', 'a', 90, '90'])
+      print(s)  # {90, 'a', '90', 'A'}
+      ```
+
+    - 在 set 中没有重复的 key,重复的元素会被自动过滤
+
+      ````py
+      s2 = set(['A', 'A', 90, 90])
+      print(s2)  # {90, 'A'}
+      ```
+      ````
+
+    - add(key) 可以重复添加元素,但是会过滤重复的。
+
+      ```py
+      s.add('wz')
+      s.add('wz2')
+      print(s)  # {'wz2', '90', 90, 'wz', 'a', 'A'}
+      ```
+
+    - remove(key) 删除元素
+
+      ```py
+      s.remove('wz2')
+      # s.remove('wz22') # 删除不存在的key会报错：KeyError: 'wz22'
+      print(s)  # {90, 'wz', 'a', 'A', '90'}
+      ```
+
+    - 交集和并集操作
+      ```py
+      s1 = set(['A', 'B', 'C'])
+      s2 = set(['B', 'C', 'D', 'A'])
+      s_intersection = s1 & s2  # {'A', 'B', 'C'}
+      s_union = s1 | s2  #  {'B', 'D', 'C', 'A'}
+      print(s1, s2, s_intersection, s_union)
+      ```
 
 <a name="variate">
 

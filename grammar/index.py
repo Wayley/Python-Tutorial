@@ -131,19 +131,44 @@
 #     print(q)
 #     q += 1
 # print('--------------------分割线---------------------')
-dic = {'name': 'wz', 'age': 19, 'fav_fruits': ['apple', 'banana', 'orange']}
-print(dic)
-# print('name' in dic)  # True
-# print('name1' in dic)  # False
-# print(dic.get('name'))  # wz
-# print(dic.get('name2'))  # None
-# print(dic.get('name3', '不存在'))  # key值不存在的时候默认会返回None(交互模式下没有), 也可以指定第二个返回值
 
-# 添加
-dic['name1'] = 'name111'
-print(dic)
-#{'name': 'wz', 'age': 19, 'fav_fruits': ['apple', 'banana', 'orange'], 'name1': 'name111'}
-# 删除
-dic.pop('age')
-print(dic)
-# {'name': 'wz', 'fav_fruits': ['apple', 'banana', 'orange'], 'name1': 'name111'}
+# # DICT
+# dic = {'name': 'wz', 'age': 19, 'fav_fruits': ['apple', 'banana', 'orange']}
+# print(dic)
+# # print('name' in dic)  # True
+# # print('name1' in dic)  # False
+# # print(dic.get('name'))  # wz
+# # print(dic.get('name2'))  # None
+# # print(dic.get('name3', '不存在'))  # key值不存在的时候默认会返回None(交互模式下没有), 也可以指定第二个返回值
+
+# # 添加
+# dic['name1'] = 'name111'
+# print(dic)
+# #{'name': 'wz', 'age': 19, 'fav_fruits': ['apple', 'banana', 'orange'], 'name1': 'name111'}
+# # 删除
+# dic.pop('age')
+# print(dic)
+# # {'name': 'wz', 'fav_fruits': ['apple', 'banana', 'orange'], 'name1': 'name111'}
+
+# SET
+# s = set(['A', 'a', 90, '90'])
+# print(s)  # {90, 'a', '90', 'A'}
+
+# s2 = set(['A', 'A', 90, 90])
+# print(s2)  # {90, 'A'}
+
+# # 添加
+# s.add('wz')
+# s.add('wz2')
+# print(s)  # {'wz2', '90', 90, 'wz', 'a', 'A'}
+
+# # 删除
+# s.remove('wz2')
+# # s.remove('wz22') # 删除不存在的key会报错：KeyError: 'wz22'
+# print(s)  # {90, 'wz', 'a', 'A', '90'}
+
+s1 = set(['A', 'B', 'C'])
+s2 = set(['B', 'C', 'D', 'A'])
+s_intersection = s1 & s2  # {'A', 'B', 'C'}
+s_union = s1 | s2  #  {'B', 'D', 'C', 'A'}
+print(s1, s2, s_intersection, s_union)
