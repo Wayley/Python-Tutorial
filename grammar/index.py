@@ -29,9 +29,16 @@
 
 print('the score is %.3f' % 96.1234)  # the score is 96.123
 
-# 没有小数点的时候 %0Xf 会保留小数点后6位 没有的用0补充, 遵循四舍五入
-print('the score is %03f' % 96.12345)  # the score is 96.123450
-print('the score is %03f' % 96.123456)  # the score is 96.123456
-print('the score is %03f' % 96.1234561)  # the score is 96.123456
-print('the score is %03f' % 96.1234564)  # the score is 96.123456
-print('the score is %03f' % 96.1234565)  # the score is 96.123457
+# # 没有小数点的时候 %0Xf 会保留小数点后6位 没有的用0补充, 遵循四舍五入
+# print('the score is %03f' % 96.12345)  # the score is 96.123450
+# print('the score is %03f' % 96.123456)  # the score is 96.123456
+# print('the score is %03f' % 96.1234561)  # the score is 96.123456
+# print('the score is %03f' % 96.1234564)  # the score is 96.123456
+# print('the score is %03f' % 96.1234565)  # the score is 96.123457
+
+print('the rate is %.2f%%' % 75.3419)  # the rate is 75.34%
+
+result = 'i m {0}, i m in class {1:02d} and my score is {2:.2f} under the full mark which is {3:.3f}'.format(
+    'wz', 9, 98.7609, 100.00)
+print(result)
+# i m wz, i m in class 09 and my score is 98.76 under the full mark which is 100.000
