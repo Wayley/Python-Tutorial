@@ -56,6 +56,83 @@ print('and u r '+ age + 'year(s) old')
 
 - 列表
 
+  > list 表示有序集合,是内置的数据类型。每一项可以不同类型
+
+  - 获取列表项
+
+    ```py
+    fruits = ['apple', 'orange', 'banana', 'pomegranate']
+    length = len(fruits)
+    print(length)  # 4
+
+    # 获取最后一个
+    print(fruits[length - 1])
+    # or
+    print(fruits[-1])
+
+    # 超出索引会报 IndexError: list index out of range
+    # print(fruits[9])
+
+    # 倒数第二个,以此类推
+    print(fruits[-2], fruits[-3])
+    ```
+
+  - 追加
+
+    - 追加到尾部 appand(value)
+
+      ```py
+      # 追加
+      fruits.append('grape')
+      print(fruits)  # ['apple', 'orange', 'banana', 'pomegranate', 'grape']
+      ```
+
+    - 追加到指定位置 insert(index, value)
+
+      ```py
+      fruits.insert(2, 'cantaloupe')
+      print(fruits)  # 'apple', 'orange', 'cantaloupe', 'banana', 'pomegranate']
+      ```
+
+  - 删除列表项 pop([index])
+
+    > 不传 index 的时候 默认删除最后一项
+
+    ```py
+    fruits.pop()
+    print(fruits)  # ['apple', 'orange', 'cantaloupe', 'banana']
+    fruits.pop(0)
+    print(fruits)  # ['orange', 'cantaloupe', 'banana']
+    ```
+
+- 元组
+
+  > tuple 也是一种有序列表,使用()表示,一旦初始化就不能被修改
+
+  ```py
+  tup = ('a', 1, 3, 'tg')
+
+  print(tup)  # ('a', 1, 3, 'tg')
+  print(tup[-1]) # tg
+  ```
+
+  > Python 规定如下
+
+  ```py
+  # Python规定如下来消除歧义
+  print((), (1), (1, ), (1, '1'))  # () 1 (1,) (1, '1')
+  ```
+
+  > tuple 不可变指的是 指向不可变,例如:
+
+  ```py
+  _tup = ('HUAT', 11, 42, ['w', 'z'])
+  print(_tup)  # ('HUAT', 11, 42, ['w', 'z'])
+  # _tup[0] = '345' # 不被允许的,会报错误TypeError: 'tuple' object does not support item assignment
+  _tup[3][0] = 'WWW'  # 是被允许的
+  print(_tup)  # ('HUAT', 11, 42, ['WWW', 'z'])
+  ```
+
 - 字典
 
 <a name="variate">

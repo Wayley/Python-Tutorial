@@ -27,7 +27,7 @@
 # print('the score is %f' % 96.1234546)  # the score is 96.123455
 # print('the score is %f' % 96.1234545)  # the score is 96.123454
 
-print('the score is %.3f' % 96.1234)  # the score is 96.123
+# print('the score is %.3f' % 96.1234)  # the score is 96.123
 
 # # 没有小数点的时候 %0Xf 会保留小数点后6位 没有的用0补充, 遵循四舍五入
 # print('the score is %03f' % 96.12345)  # the score is 96.123450
@@ -36,9 +36,53 @@ print('the score is %.3f' % 96.1234)  # the score is 96.123
 # print('the score is %03f' % 96.1234564)  # the score is 96.123456
 # print('the score is %03f' % 96.1234565)  # the score is 96.123457
 
-print('the rate is %.2f%%' % 75.3419)  # the rate is 75.34%
+# print('the rate is %.2f%%' % 75.3419)  # the rate is 75.34%
 
-result = 'i m {0}, i m in class {1:02d} and my score is {2:.2f} under the full mark which is {3:.3f}'.format(
-    'wz', 9, 98.7609, 100.00)
-print(result)
-# i m wz, i m in class 09 and my score is 98.76 under the full mark which is 100.000
+# result = 'i m {0}, i m in class {1:02d} and my score is {2:.2f} under the full mark which is {3:.3f}'.format(
+#     'wz', 9, 98.7609, 100.00)
+# print(result)
+# # i m wz, i m in class 09 and my score is 98.76 under the full mark which is 100.000
+
+fruits = ['apple', 'orange', 'banana', 'pomegranate']
+length = len(fruits)
+# print(length)  # 4
+# # 获取最后一个
+# print(fruits[length - 1])
+# # or
+# print(fruits[-1])
+# # 超出索引会报 IndexError: list index out of range
+# # print(fruits[9])
+
+# # 倒数第二个,以此类推
+# print(fruits[-2], fruits[-3])
+
+# # 追加到末尾 append
+# fruits.append('grape')
+# print(fruits)  # ['apple', 'orange', 'banana', 'pomegranate', 'grape']
+
+# 追加到指定位置 insert
+# fruits.insert(2, 'cantaloupe')
+# print(fruits)  # 'apple', 'orange', 'cantaloupe', 'banana', 'pomegranate']
+
+# # 删除 pop([index])
+# fruits.pop()
+# print(fruits)  # ['apple', 'orange', 'cantaloupe', 'banana']
+# fruits.pop(0)
+# print(fruits)  # ['orange', 'cantaloupe', 'banana']
+
+# 元组 tuple
+
+# tup = ('a', 1, 3, 'tg')
+
+# # print(tup)  # ('a', 1, 3, 'tg')
+# # print(tup[-1])  # tg
+
+# # Python规定如下
+# print((), (1), (1, ), (1, '1'))  # () 1 (1,) (1, '1')
+# tuple 不可变指的是 指向不可变,例如:
+
+_tup = ('HUAT', 11, 42, ['w', 'z'])
+print(_tup)  # ('HUAT', 11, 42, ['w', 'z'])
+# _tup[0] = '345' # 不被允许的,会报错误TypeError: 'tuple' object does not support item assignment
+_tup[3][0] = 'WWW'  # 是被允许的
+print(_tup)  # ('HUAT', 11, 42, ['WWW', 'z'])
